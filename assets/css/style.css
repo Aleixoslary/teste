@@ -140,18 +140,18 @@ body {
     }
     .inputSearch {
         width: 40vw;
-        height: 4vh;
+        height: 5vh;
         border: 1px solid gray;
         margin-top: 5vw;
         margin-bottom: 5vw;
     }
     .searchImg {
-        width: 5vw;
+        width: 4vw;
     }
     .searchButton {
         background-color: #ccc;
         width: 10vw;
-        height: 4vh;
+        height: 5vh;
     }
     .searchTool {
         display: none;
