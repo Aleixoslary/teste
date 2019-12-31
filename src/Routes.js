@@ -4,16 +4,12 @@ import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import Home from './components/menu/Index';
 
 function Routes() {
-    return ( <
-        BrowserRouter >
-        <
-        Switch >
-        <
-        Route path = "/"
-        exact component = { Home }
-        /> <
-        /Switch>  <
-        /BrowserRouter>
+    return ( 
+        <BrowserRouter >
+            <Switch >
+                <Route path = "/" exact component = { Home }/>
+            </Switch>  
+        </BrowserRouter>
     );
 }
 
