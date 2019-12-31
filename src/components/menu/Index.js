@@ -60,83 +60,51 @@ class Index extends React.Component {
 
     render() {
 
-        return ( <
-            >
-            <
-            header > { /* MENU RESPONSIVO */ } <
-            input type = "checkbox"
-            id = "control-nav" / >
-            <
-            label
-            for = "control-nav"
-            className = "control-nav" > < /label> <
-            label
-            for = "control-nav"
-            className = "control-nav-close" > < /label>
+        return ( <>
+                <header>
+                    {/* MENU RESPONSIVO */}
+                    <input type="checkbox" id="control-nav" />
+                    <label for="control-nav" className="control-nav"></label>
+                    <label for="control-nav" className="control-nav-close"></label>
+                    
+                    <nav>
+                        <div className="container">
+                            <img src={Logo} alt="Logo Intranet Fast Smart" className="logo" />
 
-            <
-            nav >
-            <
-            div className = "container" >
-            <
-            img src = { Logo }
-            alt = "Logo Intranet Fast Smart"
-            className = "logo" / >
+                            {/* LOGO RESPONSIVO */}
+                            <img src={LogoMedia} alt="Logo Intranet Fast Smart" className="logoMedia" />
+                            
+                            <div className="searchPlace">
+                                <img src={Tool} alt="ícone de uma ferramenta" className="searchTool" />
 
-            { /* LOGO RESPONSIVO */ } <
-            img src = { LogoMedia }
-            alt = "Logo Intranet Fast Smart"
-            className = "logoMedia" / >
+                                {/* CAMPO DE PESQUISA */}
+                                <form onSubmit={this.showWarning}>
+                                    <input placeholder="Pesquisar..." className="inputSearch" name="input" 
+                                    onChange={this.handleChange} />
 
-            <
-            div className = "searchPlace" >
-            <
-            img src = { Tool }
-            alt = "ícone de uma ferramenta"
-            className = "searchTool" / >
+                                    <button id="btnSearch" className="searchButton" type="submit">
+                                        <img src={Search} alt="botão de pesquisa" className="searchImg" />
+                                    </button>
+                                </form>
 
-            { /* CAMPO DE PESQUISA */ } <
-            form onSubmit = { this.showWarning } >
-            <
-            input placeholder = "Pesquisar..."
-            className = "inputSearch"
-            name = "input"
-            onChange = { this.handleChange }
-            />
-
-            <
-            button id = "btnSearch"
-            className = "searchButton"
-            type = "submit" >
-            <
-            img src = { Search }
-            alt = "botão de pesquisa"
-            className = "searchImg" / >
-            <
-            /button> <
-            /form>
-
-            <
-            /div> <
-            /div>
-
-            <
-            div className = "menu" >
-            <
-            ul > { /* EXIBINDO A LISTA DE OBJETOS (listItems)*/ } {
-                this.state.listItems.map((item, i) => ( <
-                    div key = { i } >
-                    <
-                    li > < a href = '#' > { item.Title } < /a></li >
-                    <
-                    /div>
-                ))
-            } <
-            /ul> <
-            /div> <
-            /nav> <
-            /header> <
-            />
+                            </div>
+                        </div>
+                        
+                        <div className="menu">
+                            <ul>
+                                {/* EXIBINDO A LISTA DE OBJETOS (listItems)*/}
+                                {
+                                    this.state.listItems.map((item, i)=>(
+                                        <div key={i}>
+                                            <li><a href='#'>{item.Title}</a></li>
+                                        </div>
+                                    ))
+                                }
+                            </ul>
+                        </div>
+                    </nav>
+                </header>
+            </>
         );
     }
 }
